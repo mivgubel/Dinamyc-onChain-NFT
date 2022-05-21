@@ -1,7 +1,7 @@
 const main = async () => {
 	try {
 		const nftContractFactory = await hre.ethers.getContractFactory("ChainBattles");
-		const nftContract = await nftContractFactory.deploy();
+		const nftContract = await nftContractFactory.deploy(/*chanlink_subcription_Id*/);
 		await nftContract.deployed();
 
 		console.log("NFT Contract deployed to: ", nftContract.address);
